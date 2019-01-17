@@ -1,11 +1,21 @@
 {
   "name": "gatsby-plugin-google-marketing-platform",
-  "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
-  "version": "0.1.0",
   "author": "Colby Fayock <info@colbyfayock.com>",
+  "version": "0.1.0",
+  "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "google analytics",
+    "google tagmanager"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
+  "repository": "git@github.com:colbyfayock/gatsby-plugin-google-marketing-platform.git",
   "bugs": {
     "url": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/issues"
   },
+  "main": "index.js",
   "dependencies": {
     "@babel/runtime": "^7.0.0"
   },
@@ -14,19 +24,9 @@
     "@babel/core": "^7.0.0",
     "babel-preset-gatsby-package": "^0.1.3"
   },
-  "homepage": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
-  "keywords": [
-    "gatsby",
-    "gatsby-plugin",
-    "google analytics",
-    "google tagmanager"
-  ],
-  "license": "MIT",
-  "main": "index.js",
   "peerDependencies": {
     "gatsby": ">2.0.0-alpha"
   },
-  "repository": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
   "scripts": {
     "build": "babel src --out-dir ."
   }
