@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-google-marketing-platform",
-  "author": "Colby Fayock <info@colbyfayock.com>",
+  "author": "Colby Fayock <hello@colbyfayock.com>",
   "version": "0.1.0",
   "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
   "keywords": [
