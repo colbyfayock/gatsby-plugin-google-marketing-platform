@@ -6,7 +6,7 @@ const COMPONENT_KEY = 'plugin-google-marketing-platform-analytics';
 
 class Analytics {
 
-  constructor({ id, params }, optimize_id) {
+  constructor({ id, params } = {}, optimize_id) {
     this.id = id;
     this.optimize_id = optimize_id;
     this.params = Object.assign({}, params);
@@ -34,16 +34,16 @@ class Analytics {
 
     if ( !this.id ) return null;
 
-    const config = this.optimize_id ? JSON.stringify({
+    const config = this.optimize_id ? {
       optimize_id: this.optimize_id
-    }) : '';
+    } : {};
 
     return (
       <script
         key={`${COMPONENT_KEY}-script`}
         dangerouslySetInnerHTML={{
           __html: stripIndent`
-            gtag('config', '${this.id}', ${config}});
+            gtag('config', '${this.id}', ${JSON.stringify(config)});
           `,
         }}
       />

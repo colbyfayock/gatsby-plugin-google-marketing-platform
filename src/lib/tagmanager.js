@@ -6,7 +6,7 @@ const COMPONENT_KEY = 'plugin-google-marketing-platform-tagmanager';
 
 class TagManager {
 
-  constructor({ id, params }, dataLayer) {
+  constructor({ id, params } = {}, dataLayer) {
     this.id = id;
     this.params = Object.assign({}, params);
     this.data = Object.assign({}, dataLayer);

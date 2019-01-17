@@ -2,13 +2,13 @@ import React from 'react';
 import { stripIndent } from 'common-tags';
 import { paramStringFromObject } from './util';
 
-const COMPONENT_KEY = 'plugin-google-marketing-platform-analytics';
+const COMPONENT_KEY = 'plugin-google-marketing-platform-optimize';
 
-class Analytics {
+class Optimize {
 
-  constructor({ id, timeout }) {
+  constructor({ id = null, timeout = 500 } = {}) {
     this.id = id;
-    this.timeout = timeout || 500;
+    this.timeout = timeout;
   }
 
   asyncHide() {
@@ -17,7 +17,9 @@ class Analytics {
 
     return (
       <React.Fragment>
-        <style dangerouslySetInnerHTML={{
+        <style
+          key={`${COMPONENT_KEY}-asyncHide-style`}
+          dangerouslySetInnerHTML={{
           __html: stripIndent`
             .async-hide { opacity: 0 !important }
           `,
@@ -40,4 +42,4 @@ class Analytics {
 
 }
 
-export default Analytics;
+export default Optimize;
