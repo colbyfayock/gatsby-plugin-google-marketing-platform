@@ -4,9 +4,15 @@ Easily add Google Tag Manager, Google Analytics, and Google Optimize to your Gat
 
 ## Install
 
+```
+yarn install gatsby-plugin-google-marketing-platform
+```
+or
+```
+npm install gatsby-plugin-google-marketing-platform
+```
 
-
-## How to use
+## Setup
 
 ```javascript
 // In your gatsby-config.js
