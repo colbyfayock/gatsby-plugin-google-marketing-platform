@@ -1,0 +1,1 @@
+# gatsby-plugin-google-marketing-platform
