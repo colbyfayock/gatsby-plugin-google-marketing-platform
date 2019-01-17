@@ -21,21 +21,22 @@ plugins: [
     resolve: 'gatsby-plugin-google-marketing-platform',
     options: {
       dataLayer: {
-        gaPropertyId: 'analyticsID',
+        // Preset dataLayer values
+        gaPropertyId: '[Google Analytics ID]',
       },
       tagmanager: {
-        id: 'tagmanagerID',
+        id: '[Google Tag Manager ID]',
         params: {
-          gtm_auth: 'asdf',
-          gtm_preview: 'asdf',
+          // GTM URL Parameters
+          // Ex: https://www.googletagmanager.com/gtm.js?id=[ID]&gtm_cookies_win=x
           gtm_cookies_win: 'x'
         }
       },
       analytics: {
-        id: 'analyticsID',
+        id: '[Google Analytics ID]',
       },
       optimize: {
-        id: 'optimizeID',
+        id: '[Google Optimize ID]',
       },
       includeInDevelopment: true,
     },
