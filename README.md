@@ -1,4 +1,4 @@
-# gatsby-plugin-google-marketing-platform
+# Google Marketing Platform for Gatsby
 
 Easily add Google Tag Manager, Google Analytics, and Google Optimize to your Gatsby site.
 
