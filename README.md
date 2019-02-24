@@ -8,6 +8,8 @@ An opinionated installation of Google Analytics, Google Tag Manager, and Google 
 ### What this does
 This provides the ability to configure the Google Marketing Platform base tools, including Google Analytics, Google Optimize, and Google Tag Manager.
 
+This plugin also allows the ability to preset `dataLayer` variables. This is useful in cases where you need GA, configured within GTM, to fire with particular variables on the initial pageview, such as dynamically setting your Google Analytics Property ID, instead of requiring to maintain it in multiple locations.
+
 ### What this does NOT do
 This will not provide any functionality around specific tracking or conversion tags. **These responsibilities should be handled in Google Tag Manager**.
 
