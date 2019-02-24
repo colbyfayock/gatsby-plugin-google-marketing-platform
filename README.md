@@ -2,6 +2,18 @@
 
 Easily add Google Tag Manager, Google Analytics, and Google Optimize to your Gatsby site.
 
+## Overview
+An opinionated installation of Google Analytics, Google Tag Manager, and Google Optimize, based on Google recommendations.
+
+### What this does
+This provides the ability to configure the Google Marketing Platform base tools, including Google Analytics, Google Optimize, and Google Tag Manager.
+
+### What this does NOT do
+This will not provide any functionality around specific tracking or conversion tags. **These responsibilities should be handled in Google Tag Manager**.
+
+
+## Getting Started
+
 ## Install
 
 ```
