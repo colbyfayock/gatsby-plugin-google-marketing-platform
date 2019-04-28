@@ -34,5 +34,8 @@ decls
 examples
 
 # Plugin
-src/pages
+.cache
+pages
 gatsby-config.js
+public
+tests
