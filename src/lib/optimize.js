@@ -1,6 +1,5 @@
 import React from 'react';
 import { stripIndent } from 'common-tags';
-import { paramStringFromObject } from './util';
 
 const COMPONENT_KEY = 'plugin-google-marketing-platform-optimize';
 
@@ -16,7 +15,7 @@ class Optimize {
     if ( !this.id ) return null;
 
     return (
-      <React.Fragment>
+      <React.Fragment key={`${COMPONENT_KEY}-asynchide`}>
         <style
           key={`${COMPONENT_KEY}-asyncHide-style`}
           dangerouslySetInnerHTML={{
