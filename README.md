@@ -1,11 +1,13 @@
 # Google Marketing Platform for Gatsby
 
-Easily add Google Tag Manager, Google Analytics, and Google Optimize to your Gatsby site.
+Easily add these GMP products in a cohesive way to your Gatsby site:
+* Google Tag Manager
+* Google Analytics
+* Google Optimize
 
-## Overview
-An opinionated installation of Google Analytics, Google Tag Manager, and Google Optimize, based on Google recommendations.
+The installation is based on Google's recommendations and best practices.
 
-### What this does
+### What This Does
 This provides the ability to configure the Google Marketing Platform base tools, including Google Analytics, Google Optimize, and Google Tag Manager.
 
 This plugin also allows the ability to preset `dataLayer` variables. This is useful in cases where you need GA, configured within GTM, to fire with particular variables on the initial pageview, such as dynamically setting your Google Analytics Property ID, instead of requiring to maintain it in multiple locations.
