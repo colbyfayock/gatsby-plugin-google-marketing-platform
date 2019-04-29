@@ -42,6 +42,7 @@
     "bump": "bump",
     "develop": "gatsby develop",
     "patch": "yarn bump patch --force",
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "publish": "yarn build && npm publish"
   }
 }
