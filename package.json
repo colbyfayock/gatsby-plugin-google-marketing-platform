@@ -37,7 +37,7 @@
     "gatsby": ">2.0.0-alpha"
   },
   "scripts": {
-    "build": "babel src --out-dir .",
+    "build": "babel src --ignore src/pages --out-dir .",
     "build-gatsby": "gatsby build",
     "bump": "bump",
     "develop": "gatsby develop",
