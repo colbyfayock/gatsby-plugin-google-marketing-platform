@@ -39,3 +39,5 @@ pages
 gatsby-config.js
 public
 tests
+config
+.circleci
