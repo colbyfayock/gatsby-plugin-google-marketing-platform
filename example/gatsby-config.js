@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: './',
+      resolve: '../',
       options: {
         dataLayer: {
           // Preset dataLayer values

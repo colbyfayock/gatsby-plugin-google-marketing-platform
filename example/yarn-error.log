@@ -1,0 +1,49 @@
+Arguments: 
+  /Users/colby/.nvm/versions/node/v10.15.3/bin/node /usr/local/Cellar/yarn/1.17.0/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/colby/.rvm/gems/ruby-2.4.1/bin:/Users/colby/.rvm/gems/ruby-2.4.1@global/bin:/Users/colby/.rvm/rubies/ruby-2.4.1/bin:/Users/colby/.nvm/versions/node/v10.15.3/bin:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/colby/.rvm/bin
+
+Yarn version: 
+  1.17.0
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/colby/Code/gatsby-plugin-google-marketing-platform/example/package.json: Unexpected token } in JSON at position 313
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "main": "index.js",
+    "dependencies": {
+      "@babel/runtime": "^7.5.1",
+      "common-tags": "^1.8.0",
+      "gatsby": "^2.13.6",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.5.0",
+      "@babel/core": "^7.5.0",
+      "babel-preset-gatsby-package": "^0.2.0",
+    },
+    "scripts": {
+      "build": "gatsby build",
+      "develop": "gatsby develop"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
