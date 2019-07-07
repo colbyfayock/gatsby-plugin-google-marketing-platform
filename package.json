@@ -34,7 +34,7 @@
     "jest": "^24.8.0"
   },
   "peerDependencies": {
-    "gatsby": ">2.13.6"
+    "gatsby": ">=2.13.6"
   },
   "scripts": {
     "build": "babel src --ignore src/pages --out-dir .",
