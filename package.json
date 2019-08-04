@@ -18,17 +18,17 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@babel/runtime": "^7.5.1",
+    "@babel/runtime": "^7.5.5",
     "common-tags": "^1.8.0",
-    "gatsby": "^2.13.6",
+    "gatsby": "^2.13.50",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.0",
-    "@fabiospampinato/bump": "^1.2.0",
-    "babel-preset-gatsby-package": "^0.2.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@fabiospampinato/bump": "^1.2.2",
+    "babel-preset-gatsby-package": "^0.2.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.8.0"
