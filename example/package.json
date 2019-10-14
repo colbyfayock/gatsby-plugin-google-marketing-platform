@@ -2,16 +2,16 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.6.3",
     "common-tags": "^1.8.0",
-    "gatsby": "^2.13.50",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^2.16.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "babel-preset-gatsby-package": "^0.2.2"
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "babel-preset-gatsby-package": "^0.2.9"
   },
   "scripts": {
     "build": "gatsby build",
