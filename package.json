@@ -5,6 +5,8 @@
     "packages/gatsby-plugin-google-marketing-platform"
   ],
   "scripts": {
+    "build": "yarn build:plugin && yarn build:example",
+    "build:example": "yarn workspace @gatsby-plugin-google-marketing-platform/example build",
     "build:plugin": "yarn workspace gatsby-plugin-google-marketing-platform build",
     "clean": "yarn clean:plugin && yarn clean:example && yarn clean:modules",
     "clean:plugin": "yarn workspace gatsby-plugin-google-marketing-platform clean",
