@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: '../',
+      resolve: 'gatsby-plugin-google-marketing-platform',
       options: {
         dataLayer: {
           // Preset dataLayer values

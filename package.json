@@ -1,45 +1,20 @@
 {
-  "name": "gatsby-plugin-google-marketing-platform",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
-  "version": "0.1.15",
-  "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
-  "keywords": [
-    "gatsby",
-    "gatsby-plugin",
-    "google analytics",
-    "google tagmanager",
-    "google optimize"
+  "private": true,
+  "workspaces": [
+    "packages/example",
+    "packages/gatsby-plugin-google-marketing-platform"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
-  "repository": "git@github.com:colbyfayock/gatsby-plugin-google-marketing-platform.git",
-  "bugs": {
-    "url": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/issues"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "@babel/runtime": "^7.6.3",
-    "common-tags": "^1.8.0",
-    "gatsby": "^2.16.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@fabiospampinato/bump": "^1.2.2",
-    "babel-preset-gatsby-package": "^0.2.9",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "jest": "^24.9.0"
-  },
-  "peerDependencies": {
-    "gatsby": ">=2.13.6"
-  },
   "scripts": {
-    "build": "babel src --ignore src/pages --out-dir .",
-    "bump": "bump",
-    "patch": "yarn bump patch --force",
-    "test": "jest --config ./config/jest.config.js"
+    "build:plugin": "yarn workspace gatsby-plugin-google-marketing-platform build",
+    "clean": "yarn clean:plugin && yarn clean:example && yarn clean:modules",
+    "clean:plugin": "yarn workspace gatsby-plugin-google-marketing-platform clean",
+    "clean:example": "yarn workspace @gatsby-plugin-google-marketing-platform/example clean",
+    "clean:modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +;",
+    "example:build": "yarn workspace @gatsby-plugin-google-marketing-platform/example build",
+    "example:develop": "yarn workspace @gatsby-plugin-google-marketing-platform/example develop",
+    "prepare": "yarn build:plugin",
+    "release": "yarn prepare && npm publish ./packages/gatsby-plugin-google-marketing-platform --dry-run",
+    "test": "yarn test:plugin",
+    "test:plugin": "yarn workspace gatsby-plugin-google-marketing-platform test"
   }
 }

@@ -1,0 +1,55 @@
+
+{
+  "name": "gatsby-plugin-google-marketing-platform",
+  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "version": "0.1.15",
+  "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "google analytics",
+    "google tagmanager",
+    "google optimize"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform",
+    "directory": "packages/gatsby-plugin-google-marketing-platform"
+  },
+  "bugs": {
+    "url": "https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "/gatsby-ssr.js",
+    "/index.js",
+    "/lib"
+  ],
+  "devDependencies": {
+    "@babel/runtime": "^7.6.3",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@fabiospampinato/bump": "^1.2.2",
+    "babel-preset-gatsby-package": "^0.2.9",
+    "common-tags": "^1.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "gatsby": "^2.16.1",
+    "jest": "^24.9.0"
+  },
+  "peerDependencies": {
+    "gatsby": ">=2.16.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "bump": "bump",
+    "clean": "rm -rf ./lib && rm -rf ./gatsby-ssr.js",
+    "patch": "yarn bump patch --force",
+    "prepare": "yarn build",
+    "test": "jest --config ./config/jest.config.js"
+  }
+}

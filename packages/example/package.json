@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "@gatsby-plugin-google-marketing-platform/example",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/runtime": "^7.6.3",
+    "babel-preset-gatsby-package": "^0.2.9",
+    "gatsby": "^2.16.1",
+    "gatsby-plugin-google-marketing-platform": "^0.1.14",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "rm -rf .cache && rm -rf public",
+    "develop": "gatsby develop"
+  }
+}
