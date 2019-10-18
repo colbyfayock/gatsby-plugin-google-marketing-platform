@@ -12,4 +12,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn test
-      - run: cd example && yarn install && yarn build
+      - run: yarn build
