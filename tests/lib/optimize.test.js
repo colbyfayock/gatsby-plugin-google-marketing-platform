@@ -4,6 +4,7 @@ import { mount } from 'enzyme';
 describe('Optimize', () => {
 
   const googleOptimizeId = 'ASDF-4321';
+  const googleTagManagerId = 'TESTASDF-12345678';
 
   describe('With ID', () => {
 
@@ -11,7 +12,7 @@ describe('Optimize', () => {
       id: googleOptimizeId
     };
 
-    const optimize = new Optimize(googleOptimize);
+    const optimize = new Optimize(googleOptimize, googleTagManagerId);
 
     it('should return a script and a style tag for Google Optimize async hide', () => {
 
@@ -23,7 +24,7 @@ describe('Optimize', () => {
       const scriptHtmlStripWhitespace = scriptHtml.replace(/\s+/g, '');
 
       const asyncHideStyles = '.async-hide { opacity: 0 !important }';
-      const asyncHideScript = `(function(a,s,y,n,c,h,i,d,e){s.className+=''+y;h.start=1*newDate;h.end=i=function(){s.className=s.className.replace(RegExp('?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',500,{'${googleOptimizeId}':true});`;
+      const asyncHideScript = `(function(a,s,y,n,c,h,i,d,e){s.className+=''+y;h.start=1*newDate;h.end=i=function(){s.className=s.className.replace(RegExp('?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',500,{'${googleTagManagerId}':true});`;
 
       expect(styleHtml.includes(asyncHideStyles)).toBe(true);
       expect(scriptHtmlStripWhitespace).toBe(asyncHideScript);
@@ -49,7 +50,7 @@ describe('Optimize', () => {
       timeout: 1000000
     };
 
-    const optimize = new Optimize(googleOptimize);
+    const optimize = new Optimize(googleOptimize, googleTagManagerId);
 
     it('should return a script and a style tag with a custom timeout', () => {
 
@@ -58,7 +59,7 @@ describe('Optimize', () => {
       const scriptHtml = script.prop('dangerouslySetInnerHTML').__html;
       const scriptHtmlStripWhitespace = scriptHtml.replace(/\s+/g, '');
 
-      const asyncHideScript = `(function(a,s,y,n,c,h,i,d,e){s.className+=''+y;h.start=1*newDate;h.end=i=function(){s.className=s.className.replace(RegExp('?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',${googleOptimize.timeout},{'${googleOptimizeId}':true});`;
+      const asyncHideScript = `(function(a,s,y,n,c,h,i,d,e){s.className+=''+y;h.start=1*newDate;h.end=i=function(){s.className=s.className.replace(RegExp('?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',${googleOptimize.timeout},{'${googleTagManagerId}':true});`;
 
       expect(scriptHtmlStripWhitespace).toBe(asyncHideScript);
 
