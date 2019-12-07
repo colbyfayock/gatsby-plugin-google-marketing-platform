@@ -10,7 +10,7 @@ function plugin({ setHeadComponents, setPreBodyComponents }, pluginOptions = {})
 
   const tagmanager = new TagManager(pluginOptions.tagmanager, pluginOptions.dataLayer);
   const analytics = new Analytics(pluginOptions.analytics, pluginOptions.optimize && pluginOptions.optimize.id);
-  const optimize = new Optimize(pluginOptions.optimize);
+  const optimize = new Optimize(pluginOptions.optimize, pluginOptions.tagmanager && pluginOptions.tagmanager.id);
 
   setHeadComponents([
     tagmanager.dataLayer(),
