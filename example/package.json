@@ -4,7 +4,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "common-tags": "^1.8.0",
-    "gatsby": "^2.16.1",
+    "gatsby": "^2.18.7",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },

@@ -18,23 +18,25 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
-    "common-tags": "^1.8.0",
-    "gatsby": "^2.16.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "common-tags": "^1.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.5",
     "@fabiospampinato/bump": "^1.2.2",
-    "babel-preset-gatsby-package": "^0.2.9",
+    "babel-preset-gatsby-package": "^0.2.12",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
-    "jest": "^24.9.0"
+    "gatsby": "^2.18.7",
+    "jest": "^24.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "peerDependencies": {
-    "gatsby": ">=2.13.6"
+    "gatsby": ">=2.18.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "scripts": {
     "build": "babel src --ignore src/pages --out-dir .",
