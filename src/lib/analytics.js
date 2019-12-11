@@ -1,15 +1,16 @@
 import React from 'react';
-import { stripIndent } from 'common-tags';
 import { paramStringFromObject } from './util';
+import { stripIndent } from 'common-tags';
 
 const COMPONENT_KEY = 'plugin-google-marketing-platform-analytics';
 
 class Analytics {
 
-  constructor({ id, params } = {}, optimize_id) {
+  constructor({ id, params, config } = {}, optimize_id) {
     this.id = id;
     this.optimize_id = optimize_id;
     this.params = Object.assign({}, params);
+    this.config = Object.assign({}, config)
   }
 
   paramsString() {
@@ -37,6 +38,10 @@ class Analytics {
     const config = this.optimize_id ? {
       optimize_id: this.optimize_id
     } : {};
+
+    for(let i = 0; i < Object.keys(this.config).length; i++) {
+      config[Object.keys(this.config)[i]] = this.config[Object.keys(this.config)[i]]
+    }
 
     return (
       <script
