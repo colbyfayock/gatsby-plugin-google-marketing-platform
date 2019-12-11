@@ -39,8 +39,9 @@ class Analytics {
       optimize_id: this.optimize_id
     } : {};
 
-    for(let i = 0; i < Object.keys(this.config).length; i++) {
-      config[Object.keys(this.config)[i]] = this.config[Object.keys(this.config)[i]]
+    config = {
+      ...config,
+      ...this.config
     }
 
     return (
