@@ -35,7 +35,7 @@ class Analytics {
 
     if ( !this.id ) return null;
 
-    const config = this.optimize_id ? {
+    let config = this.optimize_id ? {
       optimize_id: this.optimize_id
     } : {};
 
