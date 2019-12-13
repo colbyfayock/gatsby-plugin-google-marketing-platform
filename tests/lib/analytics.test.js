@@ -13,6 +13,9 @@ describe('Analytics', () => {
       params: {
         test: 1,
         asdf: 'fdsa'
+      },
+      config: {
+        linker: ['myDomain.com']
       }
     };
 
@@ -36,7 +39,7 @@ describe('Analytics', () => {
       const script = shallow(analytics.script());
       const html = script.prop('dangerouslySetInnerHTML').__html;
 
-      const gtagInvocation = `gtag('config', '${googleAnalyticsId}', {});`;
+      const gtagInvocation = `gtag('config', '${googleAnalyticsId}', {"linker":["myDomain.com"]});`;
 
       expect(html.includes(gtagInvocation)).toBe(true);
 
@@ -56,6 +59,9 @@ describe('Analytics', () => {
 
     const googleAnalytics = {
       id: googleAnalyticsId,
+      config: {
+        linker: ['myDomain.com']
+      }
     };
 
     const analytics = new Analytics(googleAnalytics, googleOptimizeId);
@@ -65,7 +71,7 @@ describe('Analytics', () => {
       const script = shallow(analytics.script());
       const html = script.prop('dangerouslySetInnerHTML').__html;
 
-      const gtagInvocation = `gtag('config', '${googleAnalyticsId}', {"optimize_id":"${googleOptimizeId}"});`;
+      const gtagInvocation = `gtag('config', '${googleAnalyticsId}', {"optimize_id":"${googleOptimizeId}","linker":["myDomain.com"]});`;
 
       expect(html.includes(gtagInvocation)).toBe(true);
 
