@@ -39,6 +39,42 @@ class Optimize {
 
   }
 
+  activation() {
+    return (
+      <React.Fragment key={`${COMPONENT_KEY}-activation`}>
+        <script
+          key={`${COMPONENT_KEY}-activation-script`}
+          dangerouslySetInnerHTML={{
+            __html: stripIndent`
+              (function () {
+                function activateOptimize() {
+                  dataLayer.push({
+                    'event': 'optimize.activate'
+                  });
+                }
+
+                activateOptimize();
+
+                if ( typeof MutationObserver !== 'function' ) {
+                  return;
+                }
+
+                var observer = new MutationObserver(activateOptimize);
+
+                observer.observe(document.body, {
+                  attributes: true,
+                  childList: true,
+                  characterData: true,
+                  attributeFilter: ['style']
+                });
+              })();
+            `
+          }}
+        />
+      </React.Fragment>
+    )
+  }
+
 }
 
 export default Optimize;

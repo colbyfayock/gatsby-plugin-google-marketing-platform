@@ -1,5 +1,7 @@
 import { onRenderBody } from 'gatsby-ssr';
 
+const mockFunction = () => {};
+
 describe('Gatsby SSR', () => {
 
   const googleAnalyticsId = 'TEST-1234';
@@ -27,6 +29,7 @@ describe('Gatsby SSR', () => {
 
   let headComponents = [];
   let preBodyComponents = [];
+  let postBodyComponents = [];
 
   function setHeadComponents(components) {
     headComponents = headComponents.concat(components);
@@ -34,6 +37,10 @@ describe('Gatsby SSR', () => {
 
   function setPreBodyComponents(components) {
     preBodyComponents = preBodyComponents.concat(components);
+  }
+
+  function setPostBodyComponents(components) {
+    postBodyComponents = postBodyComponents.concat(components);
   }
 
   describe('Plugin Functionality', () => {
@@ -50,7 +57,8 @@ describe('Gatsby SSR', () => {
 
       await onRenderBody({
         setHeadComponents,
-        setPreBodyComponents: () => {}
+        setPreBodyComponents: mockFunction,
+        setPostBodyComponents: mockFunction
       }, pluginOptions);
 
       expect(headComponents.length).toEqual(expectedComponentKeys.length);
@@ -68,8 +76,9 @@ describe('Gatsby SSR', () => {
       ];
 
       await onRenderBody({
-        setHeadComponents: () => {},
-        setPreBodyComponents
+        setHeadComponents: mockFunction,
+        setPreBodyComponents,
+        setPostBodyComponents: mockFunction
       }, pluginOptions);
 
       expect(preBodyComponents.length).toEqual(expectedComponentKeys.length);
@@ -80,15 +89,36 @@ describe('Gatsby SSR', () => {
 
     });
 
+    it('should include the correct set of component keys in the body', async () => {
+
+      const expectedComponentKeys = [
+        'plugin-google-marketing-platform-optimize-activation',
+      ];
+
+      await onRenderBody({
+        setHeadComponents: mockFunction,
+        setPreBodyComponents: mockFunction,
+        setPostBodyComponents
+      }, pluginOptions);
+
+      expect(postBodyComponents.length).toEqual(expectedComponentKeys.length);
+
+      postBodyComponents.forEach((component, index) => {
+        expect(component.key).toEqual(expectedComponentKeys[index]);
+      });
+
+    });
+
   });
 
   describe('Non prod', () => {
 
     it('should return false when not in prod and not explicitly including it', () => {
-      
+
       const invocation = onRenderBody({
-        setHeadComponents: () => {},
-        setPreBodyComponents
+        setHeadComponents: mockFunction,
+        setPreBodyComponents,
+        setPostBodyComponents: mockFunction
       }, {
         ...pluginOptions,
         includeInDevelopment: false

@@ -4,7 +4,7 @@ import TagManager from './lib/tagmanager';
 import Analytics from './lib/analytics';
 import Optimize from './lib/optimize';
 
-function plugin({ setHeadComponents, setPreBodyComponents }, pluginOptions = {}) {
+function plugin({ setHeadComponents, setPreBodyComponents, setPostBodyComponents }, pluginOptions = {}) {
 
   if ( process.env.NODE_ENV !== 'production' && !pluginOptions.includeInDevelopment ) return false;
 
@@ -22,6 +22,10 @@ function plugin({ setHeadComponents, setPreBodyComponents }, pluginOptions = {})
 
   setPreBodyComponents([
     tagmanager.noscript(),
+  ]);
+
+  setPostBodyComponents([
+    optimize.activation()
   ]);
 
 }
