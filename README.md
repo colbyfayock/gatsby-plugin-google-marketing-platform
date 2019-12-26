@@ -21,7 +21,7 @@ This will not provide any functionality around specific tracking or conversion t
 ## Install
 
 ```
-yarn install gatsby-plugin-google-marketing-platform
+yarn add gatsby-plugin-google-marketing-platform
 ```
 or
 ```
@@ -70,16 +70,16 @@ Note: the below will be minified along with the rest of the code and not include
   <script>
   window.dataLayer = window.dataLayer || [{"gaPropertyId":"TEST-1234"}];
   </script>
-  
+
   <!-- Initialized GTM via gtag -->
   <script>
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   </script>
-  
+
   <!-- Google Optimize async hide class -->
   <style>.async-hide { opacity: 0 !important }</style>
-  
+
   <!-- Google Optimize async hide script -->
   <script>
   (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -87,7 +87,7 @@ Note: the below will be minified along with the rest of the code and not include
   (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
   })(window,document.documentElement,'async-hide','dataLayer',500,{'ASDF-4321':true});
   </script>
-  
+
   <!-- Configure GTM given GA and GO IDs -->
   <script>
   gtag('config', 'TEST-1234', {"optimize_id":"ASDF-4321"});
