@@ -86,9 +86,21 @@ Configuration specifics for Google Analytics.
 ### Optimize
 Configuration specifics for Google Optimize.
 
-| Key                | Type   | Default  | Description                                         |
-| ------------------ | ------ | -------- | --------------------------------------------------- |
-| id                 | string | None     | Google Optimize ID                                  |
+| Key                | Type   | Default  | Description                                                      |
+| ------------------ | ------ | -------- | ---------------------------------------------------------------- |
+| id                 | string | None     | Google Optimize ID                                               |
+| timeout            | number | None     | Number of milliseconds Optimize waits to try to load - [Docs][2] |
+| activateOn         | string | None     | [Activation Method](#user-content-activation-method)             |
+
+#### Activation Method
+By default, this plugin doesn't push any activation events to Google Tag Manager for single page apps. The `activateOn` property allows configuration to provide different methods of activation.
+
+Activation events refers to Google's way of handling re-activating Optimize on DOM change.
+
+https://support.google.com/optimize/answer/7008840?hl=en
+
+##### Options
+* `observer`: Utilizes [MutationObserver][3] to watch for DOM changes
 
 ## Examples
 
@@ -173,3 +185,5 @@ Note: the below will be minified along with the rest of the code and not include
 ```
 
 [1]: https://developers.google.com/analytics/devguides/collection/analyticsjs
+[2]: https://developers.google.com/optimize#changing_the_timeout
+[3]: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver

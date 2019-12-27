@@ -15,6 +15,6 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop"
+    "develop": "cd ../ && yarn build && cd example && gatsby develop"
   }
 }

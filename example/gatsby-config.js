@@ -19,7 +19,7 @@ module.exports = {
           id: 'TEST-1234',
         },
         optimize: {
-          id: 'ASDF-4321',
+          id: 'ASDF-4321'
         },
         includeInDevelopment: true,
       },

@@ -34,7 +34,7 @@ describe('Optimize', () => {
   });
 
   describe('No ID', () => {
-    
+
     const optimize = new Optimize();
 
     it('should return null if no ID is present', () => {
@@ -44,7 +44,7 @@ describe('Optimize', () => {
   });
 
   describe('Custom Timeout', () => {
-    
+
     const googleOptimize = {
       id: googleOptimizeId,
       timeout: 1000000
@@ -66,5 +66,44 @@ describe('Optimize', () => {
     });
 
   });
+
+  describe('Activation', () => {
+
+    describe('None', () => {
+
+      it('should include the observer activation script', () => {
+        const googleOptimize = {
+          id: googleOptimizeId
+        };
+
+        const optimize = new Optimize(googleOptimize, googleTagManagerId);
+        const component = optimize.activation()
+
+        expect(component).toBe(null);
+      });
+
+    });
+    describe('On Observe', () => {
+
+      it('should include the observer activation script', () => {
+        const googleOptimize = {
+          id: googleOptimizeId,
+          activateOn: 'observer'
+        };
+
+        const optimize = new Optimize(googleOptimize, googleTagManagerId);
+        const component = mount(optimize.activation());
+        const script = component.find('script');
+        const scriptHtml = script.prop('dangerouslySetInnerHTML').__html;
+        const scriptHtmlStripWhitespace = scriptHtml.replace(/\s+/g, '');
+
+        const activationScript = `(function(){if(typeofwindow.MutationObserver==='undefined')return;functionactivateOptimize(){dataLayer.push({'event':'optimize.activate'});}vargatsbyApp=document.getElementById('___gatsby');varobserver=newMutationObserver(activateOptimize);observer.observe(gatsbyApp,{attributes:false,childList:true,characterData:true,subtree:true});})();`;
+
+        expect(scriptHtmlStripWhitespace).toBe(activationScript);
+      });
+
+    });
+
+  })
 
 });

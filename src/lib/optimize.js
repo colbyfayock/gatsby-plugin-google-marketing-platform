@@ -3,11 +3,17 @@ import { stripIndent } from 'common-tags';
 
 const COMPONENT_KEY = 'plugin-google-marketing-platform-optimize';
 
+const ACTIVATION_METHODS = [
+  'observer'
+];
+
 class Optimize {
 
-  constructor({ id = null, timeout = 500 } = {}, tagmanager_id) {
+  constructor(settings = {}, tagmanager_id) {
+    const { timeout = 500, activateOn = false } = settings;
     this.tagmanager_id = tagmanager_id;
     this.timeout = timeout;
+    this.activateOn = activateOn;
   }
 
   asyncHide() {
@@ -34,6 +40,47 @@ class Optimize {
             `,
           }}
         />
+      </React.Fragment>
+    );
+
+  }
+
+  activation() {
+
+    if ( !this.activateOn || !ACTIVATION_METHODS.includes(this.activateOn) ) return null;
+
+    return (
+      <React.Fragment key={`${COMPONENT_KEY}-activation`}>
+
+        { this.activateOn === 'observer' && (
+          <script
+            key={`${COMPONENT_KEY}-activation-observer`}
+            dangerouslySetInnerHTML={{
+              __html: stripIndent`
+                (function () {
+                  if (typeof window.MutationObserver === 'undefined') return;
+
+                  function activateOptimize() {
+                    dataLayer.push({
+                      'event': 'optimize.activate'
+                    });
+                  }
+
+                  var gatsbyApp = document.getElementById('___gatsby');
+                  var observer = new MutationObserver(activateOptimize);
+
+                  observer.observe(gatsbyApp, {
+                    attributes: false,
+                    childList: true,
+                    characterData: true,
+                    subtree: true
+                  });
+                })();
+              `,
+            }}
+          />
+        ) }
+
       </React.Fragment>
     );
 

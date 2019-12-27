@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const IndexPage = () => {
   return (
@@ -44,6 +45,9 @@ yarn add gatsby-plugin-google-marketing-platform
 }` }
         </code>
       </pre>
+      <p>
+        <Link to="/page-2">Page 2</Link>.
+      </p>
     </div>
   );
 };
