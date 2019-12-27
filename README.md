@@ -51,21 +51,44 @@ plugins: [
 
 ## Configuration
 
-| Key                                              | Type    | Default  |
-| ------------------------------------------------ | ------- | ---------|
-| [dataLayer](#user-content-data-layer)            | object  | `{}`     |
-| [tagmanager](#user-content-tag-manager)          | object  | `{}`     |
-| [analytics](#user-content-analytics)             | object  | `{}`     |
-| [optimize](#user-content-optimize)               | object  | `{}`     |
-| includeInDevelopment                             | boolean | `false`  |
+| Key                                       | Type    | Default  | Description                                  |
+| ----------------------------------------- | ------- | ---------| -------------------------------------------- |
+| [dataLayer](#user-content-data-layer)     | object  | `{}`     | [See Below](#user-content-data-layer)        |
+| [tagmanager](#user-content-tag-manager)   | object  | `{}`     | [See Below](#user-content-tag-manager)       |
+| [analytics](#user-content-analytics)      | object  | `{}`     | [See Below](#user-content-analytics)         |
+| [optimize](#user-content-optimize)        | object  | `{}`     | [See Below](#user-content-optimize)          |
+| includeInDevelopment                      | boolean | `false`  | Scripts will be bundlded in development mode |
 
 ### Data Layer
+The `dataLayer` key is a freeform object that will allow you to pass data through to the globally available `dataLayer` array that Google Tag Manager utilizes to store and watch data. There is no set functionality for this, but you can see below for some usage examples.
+
+#### Examples
+| Key                       | Type    | Default  |
+| ------------------------- | ------- | ---------|
+| gaPropertyId              | string  | None     |
 
 ### Tag Manager
+Configuration specifics for Google Tag Manager.
+
+| Key                | Type   | Default  | Description                                         |
+| ------------------ | ------ | -------- | --------------------------------------------------- |
+| id                 | string | None     | Google Tag Manager ID                               |
+| params             | object | `{}`     | Additional parameters to be added on GTM script URL |
 
 ### Analytics
+Configuration specifics for Google Analytics.
+
+| Key                | Type   | Default  | Description                                         |
+| ------------------ | ------ | -------- | --------------------------------------------------- |
+| id                 | string | None     | Google Analytics ID                                 |
+| config             | object | `{}`     | [Custom GA configuration][1]                        |
 
 ### Optimize
+Configuration specifics for Google Optimize.
+
+| Key                | Type   | Default  | Description                                         |
+| ------------------ | ------ | -------- | --------------------------------------------------- |
+| id                 | string | None     | Google Optimize ID                                  |
 
 ## Examples
 
@@ -148,3 +171,5 @@ Note: the below will be minified along with the rest of the code and not include
   <!-- GTM noscript for when JS isn't available -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=TESTASDF-12345678&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden ></iframe></noscript>
 ```
+
+[1]: https://developers.google.com/analytics/devguides/collection/analyticsjs
