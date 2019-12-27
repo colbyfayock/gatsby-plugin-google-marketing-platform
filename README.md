@@ -86,11 +86,11 @@ Configuration specifics for Google Analytics.
 ### Optimize
 Configuration specifics for Google Optimize.
 
-| Key                | Type   | Default  | Description                                                     |
-| ------------------ | ------ | -------- | --------------------------------------------------------------- |
-| id                 | string | None     | Google Optimize ID                                              |
-| timeout            | number | None     | Number of milliseconds Optimize waits to try to load - [Docs[2] |
-| activateOn         | string | None     | [Activation Method](#user-content-activation-method)            |
+| Key                | Type   | Default  | Description                                                      |
+| ------------------ | ------ | -------- | ---------------------------------------------------------------- |
+| id                 | string | None     | Google Optimize ID                                               |
+| timeout            | number | None     | Number of milliseconds Optimize waits to try to load - [Docs][2] |
+| activateOn         | string | None     | [Activation Method](#user-content-activation-method)             |
 
 #### Activation Method
 By default, this plugin doesn't push any activation events to Google Tag Manager for single page apps. The `activateOn` property allows configuration to provide different methods of activation.
