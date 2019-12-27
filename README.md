@@ -18,7 +18,7 @@ This will not provide any functionality around specific tracking or conversion t
 
 ## Getting Started
 
-## Install
+### Install
 
 ```
 yarn add gatsby-plugin-google-marketing-platform
@@ -28,7 +28,48 @@ or
 npm install gatsby-plugin-google-marketing-platform
 ```
 
-## Setup
+### Basic Setup
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: 'gatsby-plugin-google-marketing-platform',
+    options: {
+      dataLayer: {
+        gaPropertyId: '[Google Analytics ID]',
+      },
+      tagmanager: {
+        id: '[Google Tag Manager ID]'
+      },
+      analytics: {
+        id: '[Google Analytics ID]'
+      }
+    },
+  }
+]
+```
+
+## Configuration
+
+| Key                                              | Type    | Default  |
+| ------------------------------------------------ | ------- | ---------|
+| [dataLayer](#user-content-data-layer)            | object  | `{}`     |
+| [tagmanager](#user-content-tag-manager)          | object  | `{}`     |
+| [analytics](#user-content-analytics)             | object  | `{}`     |
+| [optimize](#user-content-optimize)               | object  | `{}`     |
+| includeInDevelopment                             | boolean | `false`  |
+
+### Data Layer
+
+### Tag Manager
+
+### Analytics
+
+### Optimize
+
+## Examples
+
+### Google Tag Manager with Google Analytics and Google Optimize
 
 ```javascript
 // In your gatsby-config.js
@@ -53,9 +94,8 @@ plugins: [
       },
       optimize: {
         id: '[Google Optimize ID]',
-      },
-      includeInDevelopment: true,
-    },
+      }
+    }
   }
 ]
 ```
