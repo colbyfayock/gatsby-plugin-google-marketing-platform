@@ -57,7 +57,7 @@ plugins: [
 | [tagmanager](#user-content-tag-manager)   | object  | `{}`     | [See Below](#user-content-tag-manager)       |
 | [analytics](#user-content-analytics)      | object  | `{}`     | [See Below](#user-content-analytics)         |
 | [optimize](#user-content-optimize)        | object  | `{}`     | [See Below](#user-content-optimize)          |
-| includeInDevelopment                      | boolean | `false`  | Scripts will be bundlded in development mode |
+| includeInDevelopment                      | boolean | `false`  | Scripts will be bundled in development mode |
 
 ### Data Layer
 The `dataLayer` key is a freeform object that will allow you to pass data through to the globally available `dataLayer` array that Google Tag Manager utilizes to store and watch data. There is no set functionality for this, but you can see below for some usage examples.
