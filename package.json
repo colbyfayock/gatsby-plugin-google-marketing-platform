@@ -28,8 +28,8 @@
     "babel-preset-gatsby-package": "^0.3.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "gatsby": "^2.20.4",
-    "jest": "^25.1.0",
+    "gatsby": "^2.20.20",
+    "jest": "^25.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
