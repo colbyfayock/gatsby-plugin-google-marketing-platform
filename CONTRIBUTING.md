@@ -22,3 +22,8 @@ Please be description in your Pull Request. Whether big or small, it's important
 
 ### Linking Fixed Issues
 If the Pull Request is addressing an Issue, please link that issue by specifying the `Fixes [Issue #]` syntax within the Pull Request.
+
+### Getting Added to All Contributors in the README.md
+Once your Pull Request is successfully merged, feel free to tag yourself using the All Conributors syntax, which will create a new Pull Request requesting to add you in.
+
+If your Pull Request is merged in and you're not added, please let someone know if you don't want to tag yourself, as we want to recognize everyone for their help.
