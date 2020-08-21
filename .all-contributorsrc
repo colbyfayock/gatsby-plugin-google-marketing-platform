@@ -23,6 +23,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "herrwitzi",
+      "name": "Markus Witzlsperger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/33927057?v=4",
+      "profile": "http://www.witzlsperger.de",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
