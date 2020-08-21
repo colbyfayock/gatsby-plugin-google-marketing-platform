@@ -201,6 +201,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars2.githubusercontent.com/u/1045274?v=4" width="100px;" alt=""/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://richardtaylordawson.com"><img src="https://avatars1.githubusercontent.com/u/25511178?v=4" width="100px;" alt=""/><br /><sub><b>Richard Taylor Dawson</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=richardtaylordawson" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.witzlsperger.de"><img src="https://avatars3.githubusercontent.com/u/33927057?v=4" width="100px;" alt=""/><br /><sub><b>Markus Witzlsperger</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=herrwitzi" title="Code">💻</a></td>
   </tr>
 </table>
