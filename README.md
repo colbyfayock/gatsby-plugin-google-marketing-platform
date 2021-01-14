@@ -1,6 +1,6 @@
 # Google Marketing Platform for Gatsby
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Easily add these GMP products in a cohesive way to your Gatsby site:
@@ -200,14 +200,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars2.githubusercontent.com/u/1045274?v=4" width="100px;" alt=""/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://richardtaylordawson.com"><img src="https://avatars1.githubusercontent.com/u/25511178?v=4" width="100px;" alt=""/><br /><sub><b>Richard Taylor Dawson</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=richardtaylordawson" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.witzlsperger.de"><img src="https://avatars3.githubusercontent.com/u/33927057?v=4" width="100px;" alt=""/><br /><sub><b>Markus Witzlsperger</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=herrwitzi" title="Code">💻</a></td>
+    <td align="center"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars2.githubusercontent.com/u/1045274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=colbyfayock" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://richardtaylordawson.com"><img src="https://avatars1.githubusercontent.com/u/25511178?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Richard Taylor Dawson</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=richardtaylordawson" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.witzlsperger.de"><img src="https://avatars3.githubusercontent.com/u/33927057?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Markus Witzlsperger</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=herrwitzi" title="Code">💻</a></td>
+    <td align="center"><a href="https://psykzz.com"><img src="https://avatars3.githubusercontent.com/u/1134201?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Smith</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-plugin-google-marketing-platform/commits?author=psykzz" title="Documentation">📖</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
