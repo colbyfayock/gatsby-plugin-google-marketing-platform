@@ -92,7 +92,7 @@ Configuration specifics for Google Optimize.
 | Key                | Type   | Default  | Description                                                      |
 | ------------------ | ------ | -------- | ---------------------------------------------------------------- |
 | id                 | string | None     | Google Optimize ID                                               |
-| timeout            | number | None     | Number of milliseconds Optimize waits to try to load - [Docs][2] |
+| timeout            | number | 500      | Number of milliseconds Optimize waits to try to load - [Docs][2] |
 | activateOn         | string | None     | [Activation Method](#user-content-activation-method)             |
 
 #### Activation Method
