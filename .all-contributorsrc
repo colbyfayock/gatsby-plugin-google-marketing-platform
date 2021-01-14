@@ -32,6 +32,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "psykzz",
+      "name": "Matt Smith",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1134201?v=4",
+      "profile": "https://psykzz.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
