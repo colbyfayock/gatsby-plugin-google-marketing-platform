@@ -10,7 +10,8 @@ const ACTIVATION_METHODS = [
 class Optimize {
 
   constructor(settings = {}, tagmanager_id) {
-    const { timeout = 500, activateOn = false } = settings;
+    const { timeout = 500, activateOn = false, id = null } = settings;
+    this.optimize_id = id;
     this.tagmanager_id = tagmanager_id;
     this.timeout = timeout;
     this.activateOn = activateOn;
@@ -18,7 +19,7 @@ class Optimize {
 
   asyncHide() {
 
-    if ( !this.tagmanager_id ) return null;
+    if ( !this.tagmanager_id || !this.optimize_id ) return null;
 
     return (
       <React.Fragment key={`${COMPONENT_KEY}-asynchide`}>
