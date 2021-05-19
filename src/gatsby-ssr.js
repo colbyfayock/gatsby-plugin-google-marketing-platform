@@ -16,7 +16,7 @@ function plugin({ setHeadComponents, setPreBodyComponents, setPostBodyComponents
     optimize.asyncHide(),
     analytics.script(),
     tagmanager.script(),
-  ].filter(el -> el !== null);
+  ].filter(el => el !== null);
   setHeadComponents(newHeadElements);
 
   setPreBodyComponents([
