@@ -24,7 +24,6 @@
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/runtime": "^7.14.0",
-    "@fabiospampinato/bump": "^2.0.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "babel-preset-gatsby-package": "^1.6.0",
     "enzyme": "^3.11.0",
@@ -41,9 +40,8 @@
   },
   "scripts": {
     "build": "babel src --ignore src/pages --out-dir .",
-    "bump": "bump",
-    "patch": "yarn bump patch --force",
-    "minor": "yarn bump minor --force",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
     "test": "jest --config ./config/jest.config.js"
   }
 }
