@@ -10,13 +10,14 @@ function plugin({ setHeadComponents, setPreBodyComponents, setPostBodyComponents
   const analytics = new Analytics(pluginOptions.analytics, pluginOptions.optimize && pluginOptions.optimize.id);
   const optimize = new Optimize(pluginOptions.optimize, pluginOptions.tagmanager && pluginOptions.tagmanager.id);
 
-  setHeadComponents([
+  const newHeadElements = [
     tagmanager.dataLayer(),
     analytics.setup(),
     optimize.asyncHide(),
     analytics.script(),
     tagmanager.script(),
-  ]);
+  ].filter(el => el !== null);
+  setHeadComponents(newHeadElements);
 
   setPreBodyComponents([
     tagmanager.noscript(),
