@@ -21,10 +21,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    
-    - run: yarn install --frozen-lockfile
-    
-    - name: Tests 
+
+    - run: yarn install
+
+    - name: Tests
       run: yarn test
 
     - name: Attempt to build project
