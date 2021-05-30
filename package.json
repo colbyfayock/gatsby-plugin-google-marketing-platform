@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-google-marketing-platform",
   "author": "Colby Fayock <hello@colbyfayock.com>",
-  "version": "0.1.22",
+  "version": "0.2.0",
   "description": "Gatsby plugin to add different components of the Google Marketing Platform: Tag Manager, Analytics, Optimize",
   "keywords": [
     "gatsby",
@@ -43,6 +43,7 @@
     "build": "babel src --ignore src/pages --out-dir .",
     "bump": "bump",
     "patch": "yarn bump patch --force",
+    "minor": "yarn bump minor --force",
     "test": "jest --config ./config/jest.config.js"
   }
 }
