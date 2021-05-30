@@ -1,5 +1,13 @@
-import Optimize from 'lib/optimize';
 import { mount } from 'enzyme';
+import { JSDOM } from 'jsdom';
+
+import Optimize from 'lib/optimize';
+
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const { window } = jsdom;
+
+global.window = window;
+global.document = window.document;
 
 describe('Optimize', () => {
 
