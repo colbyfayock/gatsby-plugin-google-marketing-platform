@@ -1,30 +1,28 @@
-import React from 'react';
-import { stripIndent } from 'common-tags';
-import { paramStringFromObject } from './util';
+import React from "react";
+import { stripIndent } from "common-tags";
+import { paramStringFromObject } from "./util";
 
-const COMPONENT_KEY = 'plugin-google-marketing-platform-tagmanager';
+const COMPONENT_KEY = "plugin-google-marketing-platform-tagmanager";
 
 class TagManager {
-
-  constructor({ id, params } = {}, dataLayer) {
+  constructor({ id, params, container_id } = {}, dataLayer) {
     this.id = id;
+    this.container_id = container_id || "OPT-NCRMF3H";
     this.params = Object.assign({}, params);
     this.data = Object.assign({}, dataLayer);
   }
 
   paramsString() {
-
-    if ( !this.params || Object.keys(this.params).length === 0 ) return '';
+    if (!this.params || Object.keys(this.params).length === 0) return "";
 
     return paramStringFromObject(this.params);
-
   }
 
   dataLayer() {
+    if (!this.id || !this.data) return null;
 
-    if ( !this.id || !this.data ) return null;
-
-    const data = Object.keys(this.data).length > 0 ? JSON.stringify(this.data) : '';
+    const data =
+      Object.keys(this.data).length > 0 ? JSON.stringify(this.data) : "";
 
     return (
       <script
@@ -36,18 +34,31 @@ class TagManager {
         }}
       />
     );
-
   }
 
   script() {
-
-    if ( !this.id ) return null;
+    if (!this.id) return null;
 
     return (
       <script
         key={`${COMPONENT_KEY}-script`}
         dangerouslySetInnerHTML={{
           __html: stripIndent`
+          (function(a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function() {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function() {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            ${this.container_id}: true
+        }); 
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -56,12 +67,11 @@ class TagManager {
         }}
       />
     );
-
   }
 
   noscript() {
-
-    if ( !this.id ) return null;
+    console.log("TagManager Noscript");
+    if (!this.id) return null;
 
     return (
       <noscript
@@ -69,7 +79,9 @@ class TagManager {
         dangerouslySetInnerHTML={{
           __html: stripIndent`
             <iframe
-              src="https://www.googletagmanager.com/ns.html?id=${this.id}${this.paramsString()}"
+              src="https://www.googletagmanager.com/ns.html?id=${
+                this.id
+              }${this.paramsString()}"
               height="0"
               width="0"
               style="display: none; visibility: hidden"
@@ -77,9 +89,7 @@ class TagManager {
         }}
       />
     );
-
   }
-
 }
 
 export default TagManager;
