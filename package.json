@@ -18,25 +18,25 @@
   },
   "main": "index.js",
   "dependencies": {
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/runtime": "^7.14.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
-    "babel-preset-gatsby-package": "^1.6.0",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/runtime": "^7.19.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
+    "babel-preset-gatsby-package": "^2.24.0",
     "enzyme": "^3.11.0",
-    "gatsby": "^3.6.1",
-    "jest": "^27.0.3",
-    "jsdom": "^16.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "gatsby": "^4.24.0",
+    "jest": "^29.0.3",
+    "jsdom": "^20.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "gatsby": ">=3.6.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "build": "babel src --ignore src/pages --out-dir .",
